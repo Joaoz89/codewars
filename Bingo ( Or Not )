@@ -3,3 +3,16 @@ public class BingoOrNot {
         return Arrays.stream(new int[]{2, 7, 9, 14, 15}).allMatch(n -> Arrays.stream(a).anyMatch(i -> i == n)) ? "WIN" : "LOSE";
     }
 }
+------------------------------------------------------------------------------------------------------------------------------
+public class BingoOrNot {
+    public static String bingo(int[] numberArray){
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < numberArray.length; i++) {
+            list.add(numberArray[i]);
+        }
+        if (list.contains(2) && list.contains(9) && list.contains(14) && list.contains(7) && list.contains(15)) {
+            return "WIN";
+        } 
+        return "LOSE";
+    }
+}
