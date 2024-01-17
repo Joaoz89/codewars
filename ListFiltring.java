@@ -19,3 +19,5 @@ public static List filterList(final List<Object> list) {
   static List<Object> filterList(List<Object> list) {
     return list.stream().filter(Integer.class::isInstance).toList();
   }
+------------------------------------------------------------------
+return list.stream().filter(not(li -> li instanceof String)) .collect(Collectors.toList());
