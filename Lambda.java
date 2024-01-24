@@ -1,6 +1,7 @@
  public static String bingo(int[] a) { //Bing or not
         return Arrays.stream(new int[]{2, 7, 9, 14, 15}).allMatch(n -> Arrays.stream(a).anyMatch(i -> i == n)) ? "WIN" : "LOSE"; } }
 //===========================================================================================================
+
     return IntStream.rangeClosed(s.charAt(0), s.charAt(2)) //From A To Z
      .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append) .toString();}
 
@@ -12,6 +13,7 @@
 		    return result;
 		  }
 //==============================================================================================================
+
 public static List filterList(final List<Object> list) { ////Receba um List de obj e retorne somente os int
     return list.stream().filter(e -> e instanceof Integer).collect(Collectors.toList());    }
 //or
@@ -19,13 +21,16 @@ public static List filterList(final List<Object> list) { ////Receba um List de o
 //or
     return list.stream().filter(not(li -> li instanceof String)) .collect(Collectors.toList());
 //=================================================================================================================
+
  return (a < 0) ? -a : a;  //or   
  return -Math.abs(x);
 //=========================================================
+
  public String spinWords(String sentence) { //Take a String and return all that have 5 o more word reversed                                                                        
     return Arrays.stream(sentence.split(" ")).map(i -> i.length() > 4 ? new StringBuilder(i).reverse().toString() : i)
                  .collect(Collectors.joining(" ")); }
 //======================================================================================================
+
 //Return the number (count) of vowels in the given string.  
 //indexOf(ch) returns -1 if the value ch is not found in the string ("aeiou" in this case), else it will return the position
 return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
@@ -33,6 +38,7 @@ return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
 //they used a regular expression to create a new string that only contains the vowels from the original string, then got the length of that vowels-only string
 return str.replaceAll("(?i)[^aeiou]", "").length();
 //===============================================================================================================================================================
+
         return names.length == 0 ? "no one likes this" : names.length == 1 ? names[0] + " likes this" : names.length == 2 ? names[0] + " and " + names[1] + " like this" : names.length == 3 ? names[0] + ", " + names[1] + " and " + names[2] + " like this" : names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
 
 switch (names.length) {
@@ -42,6 +48,7 @@ switch (names.length) {
           case 3: return String.format("%s, %s and %s like this", names[0], names[1], names[2]);
           default: return String.format("%s, %s and %d others like this", names[0], names[1], names.length - 2);}
 //========================================================================================================================
+
     return p1.equals(p2) ? "Draw!" : "Player " + ("scissorspaper paperrock rockscissors".contains(p1+p2)?1:2) + " won!";
 
      if(p1 == p2) return "Draw!";
