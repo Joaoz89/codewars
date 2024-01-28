@@ -14,3 +14,8 @@
       expectableLetter++;
     }
     return expectableLetter;
+ 
+================================
+
+int index = IntStream.range(0, array.length-1).filter(i -> array[i] != array[i+1]-1).findFirst().getAsInt();
+      return (char)(array[index] + 1);
