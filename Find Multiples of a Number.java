@@ -15,6 +15,8 @@ public class T1 {
 
 	
          return iterate(base, i -> i <= limit, i -> i + base).toArray();
+	  return iterate(base, i -> i + base).limit(20).toArray(); //Up to 20
+
         // seed: initial element
         //hasNext: A predicate to determine when stream must terminate
         //next: a function to be aplplied to the previous element to produce a new element
