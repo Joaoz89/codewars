@@ -1,4 +1,17 @@
- public static String bingo(int[] a) { //Bing or not
+Stream<Integer> numbers = Stream.iterate(0, n -> n + 10);
+
+==========================================
+int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+
+==================================
+
+Optional<Transaction> =   transactions.stream()
+
+     .filter(t -> t.getType() == Transaction.GROCERY)   
+   .findAny();
+
+==============================================================
+public static String bingo(int[] a) { //Bing or not
         return Arrays.stream(new int[]{2, 7, 9, 14, 15}).allMatch(n -> Arrays.stream(a).anyMatch(i -> i == n)) ? "WIN" : "LOSE"; } }
 //===========================================================================================================
 
