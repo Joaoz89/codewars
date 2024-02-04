@@ -1,3 +1,15 @@
+//Convert Array or List of int to Integer
+
+Integer[] what = Arrays.stream( data ).boxed().toArray( Integer[]::new );
+Integer[] ever = IntStream.of( data ).boxed().toArray( Integer[]::new );
+
+// To boxed list
+List<Integer> you  = Arrays.stream( data ).boxed().collect( Collectors.toList() );
+List<Integer> like = IntStream.of( data ).boxed().collect( Collectors.toList() );
+
+
+
+
 Stream<Integer> numbers = Stream.iterate(0, n -> n + 10);
 
 ==========================================
