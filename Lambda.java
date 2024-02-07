@@ -1,5 +1,8 @@
-//Convert Array or List of int to Integer
 
+//Check how much (letter) has in the String (str);
+return (int)str.chars().filter(x -> x == letter).count();
+
+//Convert Array or List of int to Integer
 Integer[] what = Arrays.stream( data ).boxed().toArray( Integer[]::new );
 Integer[] ever = IntStream.of( data ).boxed().toArray( Integer[]::new );
 
