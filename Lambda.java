@@ -1,5 +1,5 @@
 
-//Check how much (letter) has in the String (str);
+//Check how many (letter) are in the String (str);
 return (int)str.chars().filter(x -> x == letter).count();
 
 //Convert Array or List of int to Integer
