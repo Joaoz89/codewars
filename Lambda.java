@@ -1,3 +1,9 @@
+//sum only the number that don`t repeat
+return 2 * IntStream.of(arr).distinct().sum() - IntStream.of(arr).sum();
+
+//invert the elements (Ex: -1, -2, 7 to 1, 2, -7)
+return Arrays.stream(array).map(Math::negateExact).toArray();
+return java.util.Arrays.stream(array).map(i -> -i).toArray();
 
 //Check how many (letter) are in the String (str);
 return (int)str.chars().filter(x -> x == letter).count();
