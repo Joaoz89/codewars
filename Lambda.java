@@ -1,3 +1,12 @@
+//Given an array/list [] of integers , Construct a product array Of same size 
+//Such That prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
+public static long[] productArray(int[] numbers) {
+        long product = Arrays.stream(numbers).mapToLong(a -> a).reduce(1, (a, b) -> a * b); //.reduce(0, (subtotal, element) -> subtotal + element)
+        return Arrays.stream(numbers).mapToLong(a -> product / a).toArray();
+    }
+ assertArrayEquals(new long[]{10,2,5}, Solution.productArray(new int[]{1,5,2}));
+ assertArrayEquals(new long[]{216,24,162,324}, Solution.productArray(new int[]{3,27,4,2}));
+
 //sum only the number that don`t repeat
 return 2 * IntStream.of(arr).distinct().sum() - IntStream.of(arr).sum();
 
